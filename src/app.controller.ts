@@ -5,11 +5,11 @@ import { AppService } from './app.service';
 
 // https://localhost:3000/prefixo/test
 
-@Controller('prefixo')
+@Controller()
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('test')
+  @Get()
   getHello(): string {
     return this.appService.getHello();
   }
