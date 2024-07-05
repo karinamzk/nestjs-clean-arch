@@ -7,18 +7,18 @@ export class EnvConfigService implements EnvConfig {
   constructor(private configService: ConfigService) {}
 
   getAppPort(): number {
-    return Number(this.configService.get<number>('PORT'))
+    return Number(this.configService.get<number>('PORT'));
   }
 
   getNodeEnv(): string {
-    return this.configService.get<string>('NODE_ENV')
+    return this.configService.get<string>('NODE_ENV');
   }
 
   getJwtSecret(): string {
-    return this.configService.get<string>('JWT_SECRET')
+    return this.configService.get<string>('JWT_SECRET');
   }
 
   getJwtExpiresInSeconds(): number {
-    return Number(this.configService.get<number>('JWT_EXPIRES_IN'))
+    return Number(this.configService.get<number>('JWT_EXPIRES_IN'));
   }
 }
